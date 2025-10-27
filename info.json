@@ -1,0 +1,325 @@
+{
+    "project": {
+      "name": "Personal Developer Portfolio - Mood UI Style",
+      "author": "Heba Ashraf",
+      "created_at": "2025-10-27",
+      "description": "Theme + content tokens inspired by the uploaded Mood Tracker screenshots — soft pastel gradient background, large friendly hero emoji, rounded cards, subtle shadows, modal style."
+    },
+    "assets": {
+      "hero_images": [
+        "assets/my-website.webp",
+        "assets/my-website1.webp",
+        "assets/my-website2.webp"
+      ],
+      "avatar": "assets/avatar.jpg",
+      "icons": {
+        "smile": "assets/icons/smile.svg",
+        "sleep": "assets/icons/sleep.svg",
+        "chart": "assets/icons/chart.svg"
+      }
+    },
+    "theme": {
+      "palette": {
+        "background": {
+          "page": "#F3F5FB",
+          "gradient_from": "#F5F6FB",
+          "gradient_to": "#EEF0F9"
+        },
+        "primary": "#2F2D86",
+        "secondary": "#5676FF",
+        "accent": "#FFD166",
+        "muted": "#9AA0B8",
+        "card_bg": "#FFFFFF",
+        "card_shadow": "rgba(46, 50, 92, 0.08)",
+        "glass": "rgba(255,255,255,0.6)"
+      },
+      "typography": {
+        "font_family": "'Inter', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial",
+        "weights": {
+          "regular": 400,
+          "medium": 500,
+          "semibold": 600,
+          "bold": 700
+        },
+        "sizes": {
+          "h1": "28px",
+          "h2": "22px",
+          "h3": "18px",
+          "body": "14px",
+          "small": "12px"
+        },
+        "line_heights": {
+          "default": 1.45,
+          "tight": 1.2
+        }
+      },
+      "spacing": {
+        "xs": "6px",
+        "sm": "12px",
+        "md": "20px",
+        "lg": "32px",
+        "xl": "48px"
+      },
+      "radii": {
+        "sm": "8px",
+        "md": "14px",
+        "lg": "20px",
+        "pill": "999px"
+      },
+      "shadows": {
+        "soft": "0 8px 20px rgba(46,50,92,0.08)",
+        "card": "0 6px 18px rgba(46,50,92,0.06)",
+        "modal": "0 14px 40px rgba(46,50,92,0.12)"
+      }
+    },
+    "layout": {
+      "page_width": "1100px",
+      "gutter": "24px",
+      "columns": 12,
+      "header_height": "72px",
+      "footer_height": "80px"
+    },
+    "components": {
+      "header": {
+        "type": "topbar",
+        "style": {
+          "background": "transparent",
+          "logo": {
+            "text": "Mood tracker",
+            "color": "#2F2D86",
+            "font_weight": 700
+          },
+          "avatar_size": "40px"
+        },
+        "links": [
+          { "label": "Home", "href": "/" },
+          { "label": "Projects", "href": "/projects" },
+          { "label": "About", "href": "/about" },
+          { "label": "Contact", "href": "/contact" }
+        ]
+      },
+      "hero": {
+        "layout": "centered-card",
+        "style": {
+          "card_bg": "theme.palette.card_bg",
+          "radius": "lg",
+          "padding": "32px",
+          "shadow": "soft"
+        },
+        "content": {
+          "greeting": "Hello, Lisa!",
+          "heading": "How are you feeling today?",
+          "date_line": "Wednesday, April 16th, 2025",
+          "main_stat": {
+            "label": "I'm feeling",
+            "mood_text": "Very Happy",
+            "emoji_size": "140px",
+            "emoji_bg": "#FFD166",
+            "quote": "\"When your heart is full, share your light with the world.\""
+          }
+        }
+      },
+      "stat_card": {
+        "style": {
+          "bg": "theme.palette.card_bg",
+          "radius": "md",
+          "padding": "16px",
+          "shadow": "card",
+          "border": "1px solid rgba(47,45,134,0.04)"
+        },
+        "variants": [
+          {
+            "name": "small",
+            "width": "260px",
+            "height": "auto"
+          },
+          {
+            "name": "wide",
+            "width": "520px",
+            "height": "auto"
+          }
+        ]
+      },
+      "modal": {
+        "type": "center",
+        "style": {
+          "width": "460px",
+          "radius": "lg",
+          "bg": "theme.palette.card_bg",
+          "shadow": "modal",
+          "overlay": "rgba(31,34,66,0.55)"
+        },
+        "header": {
+          "title": "Log your mood",
+          "progress_bar": true
+        },
+        "form": {
+          "options": [
+            { "label": "Very Happy", "value": "very_happy", "emoji": "😊" },
+            { "label": "Happy", "value": "happy", "emoji": "🙂" },
+            { "label": "Neutral", "value": "neutral", "emoji": "😐" },
+            { "label": "Sad", "value": "sad", "emoji": "😔" },
+            { "label": "Very Sad", "value": "very_sad", "emoji": "😢" }
+          ],
+          "cta": {
+            "label": "Continue",
+            "style": {
+              "bg": "#5668FF",
+              "color": "#FFFFFF",
+              "radius": "pill",
+              "padding": "12px 20px"
+            }
+          }
+        }
+      },
+      "chart": {
+        "type": "rounded-bar",
+        "style": {
+          "bar_radius": "12px",
+          "grid_lines": false,
+          "axis_color": "#E8EAF6",
+          "labels_font_size": "12px",
+          "height": "240px"
+        },
+        "colors": ["#8EE7A0", "#FFD3B2", "#8EC6FF", "#D9B5FF"]
+      },
+      "card_grid": {
+        "columns": 2,
+        "gap": "20px",
+        "card_style": "stat_card"
+      }
+    },
+    "pages": {
+      "home": {
+        "route": "/",
+        "sections": [
+          {
+            "id": "hero-section",
+            "type": "hero",
+            "component": "hero",
+            "layout": {
+              "left": "mood-summary-card",
+              "right": [
+                "sleep-card",
+                "reflection-card"
+              ]
+            }
+          },
+          {
+            "id": "overview",
+            "type": "two-column",
+            "left": {
+              "component": "average-mood",
+              "title": "Average Mood",
+              "data": {
+                "label": "Neutral",
+                "note": "Same as the previous 5 check-ins"
+              },
+              "style": { "variant": "small" }
+            },
+            "right": {
+              "component": "average-sleep",
+              "title": "Average Sleep",
+              "data": {
+                "label": "5-6 Hours",
+                "note": "↑ Increase from the previous 5 check-ins"
+              },
+              "style": { "variant": "small" }
+            }
+          },
+          {
+            "id": "trends",
+            "type": "card",
+            "title": "Mood and sleep trends",
+            "component": "chart",
+            "chartData": {
+              "labels": ["Mar 31", "Apr 02", "Apr 04", "Apr 06", "Apr 07", "Apr 09", "Apr 11", "Apr 12", "Apr 13", "Apr 15"],
+              "datasets": [
+                { "label": "0-2 hours", "data": [0,0,1,0,0,0,0,0,0,0] },
+                { "label": "2-4 hours", "data": [1,1,0,1,0,0,0,1,0,0] },
+                { "label": "4-6 hours", "data": [2,1,2,2,1,2,2,1,2,1] },
+                { "label": "6-9 hours", "data": [0,2,1,1,2,1,1,2,1,3] }
+              ]
+            }
+          },
+          {
+            "id": "projects",
+            "type": "cards-row",
+            "title": "Highlighted Projects",
+            "cards": [
+              {
+                "title": "Personal Dashboard UI",
+                "subtitle": "React • Vite • TypeScript",
+                "description": "Design system inspired by mood-tracker visuals: gradients, rounded cards, friendly illustrations.",
+                "link": "/projects/dashboard",
+                "thumbnail": "assets/my-website1.webp"
+              },
+              {
+                "title": "Portfolio Website",
+                "subtitle": "Responsive • Accessible",
+                "description": "Clean hero, soft gradient backgrounds, and modal-driven interactions.",
+                "link": "/projects/portfolio",
+                "thumbnail": "assets/my-website2.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "about": {
+        "route": "/about",
+        "sections": [
+          {
+            "id": "about-me",
+            "title": "About Me",
+            "content": "أنا مبرمجة واجهات أمامية أعمل بـ React و TypeScript. أحب التصميم النظيف، واجهات المستخدم الودية، وتجارب المستخدم السلسة.",
+            "skills": ["React", "TypeScript", "Vite", "Bootstrap", "Django (basic)", "Node.js"]
+          },
+          {
+            "id": "contact-card",
+            "title": "Get in touch",
+            "content": {
+              "email": "hebaashraf81@gmail.com",
+              "phone": "01062043130",
+              "location": "Cairo, Egypt"
+            }
+          }
+        ]
+      }
+    },
+    "ui_guidelines": {
+      "card_spacing": "use spacing.md for internal padding, spacing.sm between cards",
+      "corners": "cards use theme.radii.lg, buttons use pill unless secondary",
+      "buttons": {
+        "primary": {
+          "bg": "theme.palette.primary",
+          "color": "#FFFFFF",
+          "radius": "pill",
+          "padding": "12px 18px",
+          "shadow": "0 6px 18px rgba(47,45,134,0.14)"
+        },
+        "ghost": {
+          "bg": "transparent",
+          "border": "1px solid rgba(47,45,134,0.08)",
+          "color": "theme.palette.primary"
+        }
+      },
+      "modal_rules": "modal always center on desktop, full screen sheet on mobile, overlay uses rgba(31,34,66,0.55)",
+      "animations": {
+        "card_entry": "translateY(8px) + fade-in (200ms ease)",
+        "hover": "scale up .98 → 1.02 subtle (150ms)"
+      }
+    },
+    "implementation_notes": {
+      "css_tokens": "map 'theme' values to CSS variables --color-primary, --bg-gradient-from, --radius-lg, etc.",
+      "responsive": "stack columns to single column under 900px. hero emoji scales down to 80px on small screens.",
+      "charts": "use rounded bars, no heavy grid lines, soft pastel palette. maintain accessible contrast for labels.",
+      "images": "use the uploaded assets as thumbnails/hero backgrounds; apply subtle blur/overlay behind modal."
+    },
+    "sample_content_ar": {
+      "hero_headline": "ازيك؟ إحكيلي عن مزاجك النهاردة",
+      "hero_sub": "الأربعاء، 16 أبريل 2025",
+      "projects_section_title": "مشاريعي",
+      "contact_cta": "تواصل معي"
+    }
+  }
+  
